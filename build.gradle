@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.0.12'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+def serenityVersion = '4.0.12'
+def cucumberVersion = '7.14.0'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    // Core Serenity
+    implementation "net.serenity-bdd:serenity-core:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-reports:$serenityVersion"
+
+    // Cucumber
+    testImplementation "net.serenity-bdd:serenity-cucumber:$serenityVersion"
+    testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
+    implementation "io.cucumber:datatable:$cucumberVersion"
+
+    // Utilidades
+    implementation 'org.assertj:assertj-core:3.24.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.0'
+    implementation 'org.reflections:reflections:0.10.2'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    // Excel (si lo usas en tu proyecto)
+    implementation 'org.apache.poi:poi:3.17'
+    implementation 'org.apache.poi:poi-ooxml:3.17'
+
+    // JUnit
+    testImplementation 'junit:junit:4.13.2'
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnit {
+        testLogging.showStandardStreams = true
+        systemProperties System.getProperties()
+        systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+    }
+}
+
+test.finalizedBy(aggregate)

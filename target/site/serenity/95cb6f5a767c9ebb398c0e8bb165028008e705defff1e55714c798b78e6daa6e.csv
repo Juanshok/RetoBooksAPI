@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Creacion exitosa de usuario y orden","Creacion de Orden","PENDING","2025-07-22T15:28:47.8139954-05:00[America/Bogota]","0.0","0.11"
+"Creacion exitosa de orden","Creacion de Orden","PENDING","2025-07-22T18:02:49.029625-05:00[America/Bogota]","0.0","0.11"
+"Generar token","Generar token exitoso","PENDING","2025-07-22T23:09:15.9205272-05:00[America/Bogota]","0.0","0.09"
+"Generar token","Generar token exitoso","PENDING","2025-07-22T23:23:59.899771-05:00[America/Bogota]","0.0","0.13"

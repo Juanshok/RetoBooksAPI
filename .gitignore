@@ -1,0 +1,84 @@
+# === IDEs ===
+.idea/
+*.iml
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# === Build ===
+/target/
+/build/
+/out/
+/bin/
+
+# === Logs ===
+*.log
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === Gradle ===
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+gradle.properties
+*.gradle
+*.gradle.kts
+
+# === Maven ===
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# === Serenity ===
+.serenity/
+target/site/serenity/
+serenity.properties
+serenity.conf
+serenity-output/
+**/serenity-output/
+
+# === Reports ===
+/reports/
+/test-results/
+/test-output/
+
+# === Test Artifacts ===
+*.class
+*.swp
+*.swo
+
+# === Environment ===
+.env
+.env.*
+
+# === System Files ===
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === Others (if needed) ===
+*.db
+*.sqlite
+
+# === Windows ===
+*.exe
+*.dll
+
+# === Mac ===
+*.DS_Store
